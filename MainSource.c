@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<stdint.h>
 
 typedef struct{
@@ -8,9 +9,7 @@ typedef struct{
 
 int main()
 {
-	MyStruct *Arg_St;
-	MyStruct Dummy_st;
-	Arg_St = &Dummy_st;
+	MyStruct *Arg_St = malloc(sizeof(MyStruct));
 	scanf("%d\n", &Arg_St->first_e);
 	scanf("%f", &Arg_St->second_e);
 	printf("%f\n",(Arg_St->first_e - Arg_St->second_e));
